@@ -1,10 +1,21 @@
 <template>
-  <h1>Hello World</h1>
+  <form action="">
+    <div>
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" required />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+    </div>
+    <input type="submit" value="Login" />
+  </form>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
-  name: "Login"
+import { createComponent } from "@vue/composition-api";
+export default createComponent({
+  name: "Login",
+  setup() {}
 });
 </script>
