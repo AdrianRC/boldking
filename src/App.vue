@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" class="flex flex-col content-center mt-4 font-sans">
+    <h1 class="text-3xl font-semibold text-center uppercase">Boldking</h1>
     <Login />
   </div>
 </template>
