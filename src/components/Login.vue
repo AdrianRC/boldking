@@ -44,6 +44,7 @@
 
 <script lang="ts">
 import { createComponent, ref, computed } from "@vue/composition-api";
+// @ts-ignore
 import { validate, submit as post } from "../../api";
 
 enum Status {
