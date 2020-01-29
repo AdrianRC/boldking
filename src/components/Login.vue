@@ -1,8 +1,9 @@
 <template>
-  <form class="mt-6" @submit="submit">
+  <form class="self-center w-full max-w-xl px-3 mt-6 md:px-6" @submit="submit">
     <div>
-      <label for="username">Username</label>
+      <label for="username" class="text-sm">Username</label>
       <input
+        class="block w-full px-3 py-2 mt-2 border border-gray-500"
         type="text"
         name="username"
         id="username"
@@ -14,9 +15,10 @@
         v-model="username"
       />
     </div>
-    <div>
-      <label for="password">Password</label>
+    <div class="mt-4">
+      <label for="password" class="text-sm">Password</label>
       <input
+        class="block w-full px-3 py-2 mt-2 border border-gray-500"
         type="password"
         name="password"
         id="password"
@@ -28,12 +30,14 @@
         v-model="password"
       />
     </div>
-    <div class="w-24 h-24" :class="statusClass">{{ message }}</div>
+    <div class="w-full px-5 py-2 my-4 text-white min-h-10" :class="statusClass">
+      {{ message }}
+    </div>
     <input
       type="submit"
       value="Login"
       :disabled="!isSubmitEnabled"
-      class="disabled:opacity-25 bg-green-400"
+      class="px-5 py-2 font-bold uppercase bg-green-400 cursor-pointer disabled:opacity-25 hover:bg-green-300"
     />
   </form>
 </template>
